@@ -5,10 +5,10 @@ This project consists of several steps.
   This means that the lib/librang90/lodcsh2.f90 program needs to be rewritten.
   Output should also be in this shorter form.
 
-  2. Re-organize lib/librang90 library to reflect it structure an attemp some
+  2. Re-organize lib/librang90 library to reflect its structure and attemp some
     documentation.
 
-  3. Change the way angular data is stored, using a l ist of integrals, to
+  3. Change the way angular data is stored, using a list of integrals, to
     avoid the need for sorting.
 
 ##  Algorithm for reading the short format
@@ -19,10 +19,10 @@ This project consists of several steps.
          Line 1 -- subshells and their occupation : contains at least one '('
          Line 2 -- quantum numbers for each subshell
          Line 3 -- coupling, J and parity (ends with either + or -)
-
+         
   3. Do
-      `Read Next line 
-        if (end of file or *  then
+       Read Next line 
+        if (end of file or *)  then
             exit
         end
        if (type is LIne 1)  then
@@ -30,7 +30,6 @@ This project consists of several steps.
           Read next line -> Line 2
           Read next line --> Line 3
           save information as done before
-
        else if (TYpe is line 3) 
           Line 1 is unchanged, save next -> Line 3
           save information and process as before
